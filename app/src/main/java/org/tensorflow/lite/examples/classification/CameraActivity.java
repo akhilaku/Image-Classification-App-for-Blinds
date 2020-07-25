@@ -340,9 +340,9 @@ public abstract class CameraActivity extends AppCompatActivity
     handlerThread.start();
     handler = new Handler(handlerThread.getLooper());
 
-    mp = MediaPlayer.create(this, R.raw.hun);
-    mp1 = MediaPlayer.create(this, R.raw.ten);
-    mp2 = MediaPlayer.create(this, R.raw.five);
+    mp = MediaPlayer.create(this, R.raw.chilly);
+    mp1 = MediaPlayer.create(this, R.raw.lemon);
+    mp2 = MediaPlayer.create(this, R.raw.tomato);
 
  /*   mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
       @Override
@@ -559,13 +559,13 @@ public abstract class CameraActivity extends AppCompatActivity
                   String.format("%.2f", (100 * recognition.getConfidence())) + "%");
         float confi = 100 * recognition.getConfidence();
         try {
-          if (recognitionTextView.getText().toString().equalsIgnoreCase("500") && confi > 99.5) {
+          if (recognitionTextView.getText().toString().equalsIgnoreCase("Tomato") && confi > 99.5) {
 
             mp2.start();
 
-          } else if (recognitionTextView.getText().toString().equalsIgnoreCase("100") && confi > 99.5) {
+          } else if (recognitionTextView.getText().toString().equalsIgnoreCase("Chilly") && confi > 99.5) {
             mp.start();
-          } else if (recognitionTextView.getText().toString().equalsIgnoreCase("10") && confi > 90) {
+          } else if (recognitionTextView.getText().toString().equalsIgnoreCase("Lemon") && confi > 90) {
             mp1.start();
           }
         }catch (Exception e){
